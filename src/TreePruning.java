@@ -19,7 +19,7 @@ public class TreePruning
 	  {
 		  long uid = scanner.nextLong();
 		  long parentUid = scanner.nextLong();
-		  scanner.nextline();
+		  scanner.nextLine();
 		  
 		  TreeNode node = new TreeNode(uid , parentUid);//condtructing node
 		  addNodeToTree( node);
