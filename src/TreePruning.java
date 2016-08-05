@@ -14,9 +14,10 @@ public class TreePruning
   public TreePruning(String path)
   {
 	  scanner = new Scanner(path);
-	  
+	  int nn = 1;
 	  while(scanner.hasNextLong())
 	  {
+		  System.out.println(nn++);
 		  long uid = scanner.nextLong();
 		  long parentUid = scanner.nextLong();
 		  scanner.nextLine();
