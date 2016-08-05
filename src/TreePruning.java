@@ -15,6 +15,9 @@ public class TreePruning
   {
 	  scanner = new Scanner(path);
 	  int nn = 1;
+	  System.out.println(nn++);
+	  System.out.println(nn++);
+	  System.out.println(nn++);
 	  while(scanner.hasNextLong())
 	  {
 		  System.out.println(nn++);
