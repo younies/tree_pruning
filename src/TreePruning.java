@@ -87,6 +87,8 @@ public class TreePruning
 	  }
 	  
 	  Collections.sort(uidsThatTaken);
+	  System.out.println("Taken");
+	  System.out.println(uidsThatTaken.size());
   }
  
  
