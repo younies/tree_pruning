@@ -96,8 +96,13 @@ public class TreePruning
   public void tree_pruning(TreeNode node)//pruin the tree
   {
 	//  if(node == null || node.children == null) return;
+	  TreeNode childOfNode[] = new TreeNode[node.children.size()];
+	  int i = 0;
 	  for(TreeNode tempNode : node.children)
-		  tree_pruning( tempNode);
+		  childOfNode[i++] = tempNode;
+	  
+	  for( TreeNode tempNode : childOfNode )
+		  tree_pruning(tempNode);
 	  
 	  if(node.children.size() == 0 && node.tag == false)
 	  {
