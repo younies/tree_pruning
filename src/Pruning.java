@@ -23,7 +23,7 @@ public class Pruning {
 		tree.printAllTheNodeInFile(output_file_path);
 		
 		
-		ArrayList<Long> nums = tree.getNoNUsedUIDS();
+		ArrayList<Long> nums = tree.uidsNotTakenNotUsed;
 		for(long num: nums)
 		{
 			System.out.println(num);
