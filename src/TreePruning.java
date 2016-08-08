@@ -59,6 +59,10 @@ public class TreePruning
 		  else
 			  start = mid + 1;
 	  }
+	  
+	  System.out.println(uid);
+	  System.out.println("Null");
+	  
 	  return null;
   }
   
