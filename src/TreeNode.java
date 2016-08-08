@@ -19,6 +19,8 @@ class TreeNode
     {
     		int index = getIndexInLinkedList( node );
     		assert(index >= 0);
+    		System.out.println("index");
+    		System.out.println(index);
     		this.children.remove(index);
     }
     
