@@ -184,12 +184,11 @@ public class TreePruning
   
   
   
-  public Long[] getNoNUsedUIDS()
+  public ArrayList<Long> getNoNUsedUIDS()
   {
-	  Long ret[] = new Long[this.uidsNotTakenNotUsed.size()];
-	   ret = (Long[])this.uidsNotTakenNotUsed.toArray();
+	 
+	   return this.uidsNotTakenNotUsed;
 	   
-	   return ret;
   }
   
 }

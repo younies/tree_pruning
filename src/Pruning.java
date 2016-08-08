@@ -1,4 +1,5 @@
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 
 public class Pruning {
 
@@ -21,13 +22,13 @@ public class Pruning {
 		
 		tree.printAllTheNodeInFile(output_file_path);
 		
-		Long notUsed[] = tree.getNoNUsedUIDS();
 		
-		for(long num: notUsed)
+		ArrayList<Long> nums = tree.getNoNUsedUIDS();
+		for(long num: nums)
 		{
 			System.out.println(num);
 		}
 		
-		System.out.println(notUsed.length);
+		System.out.println(nums.size());
 	}
 }
