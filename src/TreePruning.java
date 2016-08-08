@@ -11,35 +11,39 @@ public class TreePruning
 	boolean pruneHappened = false;
 	PrintWriter output;
   
-  public TreePruning(String path)
+  public TreePruning(String path) throws FileNotFoundException
   {
-	  scanner = new Scanner(path);
+	  scanner = new Scanner( new File( path));
 	  int nn = 1;
-	  System.out.println(nn++);
-	  System.out.println(nn++);
-	  System.out.println(nn++);
-	  while(scanner.hasNext())
+	  while(scanner.hasNextLong())
 	  {
 		  System.out.println(nn++);
-		  long uid = scanner.nextLong();
+		  long uid =  scanner.nextLong();
 		  long parentUid = scanner.nextLong();
 		  scanner.nextLine();
 		  
-		  TreeNode node = new TreeNode(uid , parentUid);//condtructing node
-		  addNodeToTree( node);
+		  TreeNode node = new TreeNode(uid , parentUid);//constructing the node
+		  this.treeNodes.add(node);
 	  }
+	  
     scanner.close();
+    
+    
+    
   }
   
   
   
-  public void addNodeToTree(TreeNode node)// this 
+  public void connectNodes()// this 
   {
-	  this.treeNodes.add(node);
-	  TreeNode parent = getNodeUsingUid(node.parentUid);
-	  if(parent.uid != node.uid)
-		  parent.children.add(node);
+	  for(TreeNode node: this.treeNodes)
+	  {
+		  TreeNode parent = getNodeUsingUid(node.parentUid);
+		  if(parent.uid != node.uid)
+			  parent.children.add(node);
+	  }
   }
+  
   
   public TreeNode getNodeUsingUid(long uid)
   {
@@ -59,9 +63,9 @@ public class TreePruning
   }
   
   
-  public void tagTreeNodes(String path)// this for tagging all the tree elements that we need
+  public void tagTreeNodes(String path) throws FileNotFoundException // this for tagging all the tree elements that we need
   {
-	  scanner = new Scanner(path);
+	  scanner = new Scanner(new File( path ));
 	  
 	  //read the elements
 	  while(scanner.hasNextLong())
