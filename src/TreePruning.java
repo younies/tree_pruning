@@ -93,7 +93,7 @@ public class TreePruning
 
   public void tree_pruning(TreeNode node)//pruin the tree
   {
-	  if(node == null || node.children == null) return;
+	//  if(node == null || node.children == null) return;
 	  for(TreeNode tempNode : node.children)
 		  tree_pruning( tempNode);
 	  
