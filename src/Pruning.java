@@ -19,7 +19,7 @@ public class Pruning {
 			tree.pruneHappened = false;
 		}
 		
-		
+		tree.printAllTheNodeInFile(output_file_path);
 		
 	}
 }
