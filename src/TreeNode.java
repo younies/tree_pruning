@@ -11,6 +11,7 @@ class TreeNode
     {
     		this.uid = uid;
     		this.parentUid = parentUid;
+    		children = new ArrayList<TreeNode>();
     }
     
     
