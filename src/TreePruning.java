@@ -17,7 +17,7 @@ public class TreePruning
 	  int nn = 1;
 	  while(scanner.hasNextLong())
 	  {
-		  System.out.println(nn++);
+		  //System.out.println(nn++);
 		  long uid =  scanner.nextLong();
 		  long parentUid = scanner.nextLong();
 		  scanner.nextLine();
