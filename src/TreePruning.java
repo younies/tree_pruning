@@ -149,7 +149,8 @@ public class TreePruning
 	  
 	  //print the parent uid
 	  this.output.print(node.parentUid);
-	  this.output.print("\t");
+	  this.output.println("\t");
+	  
 	  
 	  
 	  for(TreeNode child: node.children)
