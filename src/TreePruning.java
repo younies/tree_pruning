@@ -127,8 +127,12 @@ public class TreePruning
 		  pruneAfterPruning(child);
 		  return;
 	  }
+	  TreeNode childOfNode[] = new TreeNode[node.children.size()];
+	  int i = 0;
+	  for(TreeNode tempNode : node.children)
+		  childOfNode[i++] = tempNode;
 	  
-	  for(TreeNode child : node.children)
+	  for(TreeNode child : childOfNode)
 	  {
 		  pruneAfterPruning(child);
 	  }
