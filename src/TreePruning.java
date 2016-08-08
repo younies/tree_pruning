@@ -28,7 +28,7 @@ public class TreePruning
 	  
     scanner.close();
     
-    
+    connectNodes();
     
   }
   
