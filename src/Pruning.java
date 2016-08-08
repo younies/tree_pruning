@@ -21,5 +21,13 @@ public class Pruning {
 		
 		tree.printAllTheNodeInFile(output_file_path);
 		
+		Long notUsed[] = tree.getNoNUsedUIDS();
+		
+		for(long num: notUsed)
+		{
+			System.out.println(num);
+		}
+		
+		System.out.println(notUsed.length);
 	}
 }

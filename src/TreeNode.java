@@ -18,12 +18,6 @@ class TreeNode
     public void removeChild(TreeNode node)
     {
     		int index = getIndexInLinkedList( node );
-    		System.out.println("Node");
-    		System.out.println(node.uid);
-    		System.out.println(node.parentUid);
-    		System.out.println(this.children.size());
-    		System.out.println("index");
-    		System.out.println(index);
     		this.children.remove(index);
     }
     

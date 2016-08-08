@@ -7,6 +7,7 @@ public class TreePruning
 	ArrayList<TreeNode> treeNodes = new ArrayList<TreeNode>();
 	ArrayList<Long> neededIdsList = new ArrayList<Long>();
 	ArrayList<Long> uidsThatTaken = new ArrayList<Long>();
+	ArrayList<Long> uidsNotTakenNotUsed = new ArrayList<Long>();
 	private Scanner scanner;
 	boolean pruneHappened = false;
 	PrintWriter output;
@@ -14,7 +15,6 @@ public class TreePruning
   public TreePruning(String path) throws FileNotFoundException
   {
 	  scanner = new Scanner( new File( path));
-	  int nn = 1;
 	  while(scanner.hasNextLong())
 	  {
 		  //System.out.println(nn++);
@@ -84,11 +84,16 @@ public class TreePruning
 	  {
 		  node.tag = (Collections.binarySearch(neededIdsList , node.uid) >= 0);
 		  if(node.tag) this.uidsThatTaken.add(node.uid);
+		  
 	  }
 	  
 	  Collections.sort(uidsThatTaken);
 	  System.out.println("Taken");
 	  System.out.println(uidsThatTaken.size());
+	  
+	  for(long uid: neededIdsList )
+		  if(Collections.binarySearch(uidsThatTaken, uid) < 0 )
+			  this.uidsNotTakenNotUsed.add(uid);
   }
  
  
@@ -176,6 +181,17 @@ public class TreePruning
 	  return printAllTheNodeInFile(this.getNodeUsingUid(1));
 	  
   }
+  
+  
+  
+  public Long[] getNoNUsedUIDS()
+  {
+	  Long ret[] = new Long[this.uidsNotTakenNotUsed.size()];
+	   ret = (Long[])this.uidsNotTakenNotUsed.toArray();
+	   
+	   return ret;
+  }
+  
 }
   
 
