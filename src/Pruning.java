@@ -30,21 +30,9 @@ public class Pruning {
 		tree.output.close();
 		tree.printTheDatabaseNames(output_needed);
 		
-		ArrayList<Long> nums = tree.uidsNotTakenNotUsed;
-		for(long num: nums)
-		{
-			System.out.println(num);
-		}
-		
-		System.out.println(nums.size());
-		
-		TreeNode tempNode = tree.getNodeUsingUid(272844);
-		System.out.println(tempNode.tag);
-		System.out.println(tempNode.uid);
-		System.out.println(tempNode.parentUid);
-		System.out.println(tempNode.shortName);
-		
-		
-		
+
+		System.out.println("Congratulations!!!  the new tree was created :D  ");
+		System.out.println("The path to the new tree: " +output_file_path);
+		System.out.println("The path to the synchronized nodes: " + output_needed);
 	}
 }
