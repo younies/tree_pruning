@@ -232,6 +232,7 @@ public class TreePruning
 		  if(node.tag)
 			  this.output.println(node.uid);
 	  }
+	  this.output.flush();
 	  this.output.close();
   }
 }
