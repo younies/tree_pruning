@@ -26,6 +26,8 @@ public class Pruning {
 		
 		tree.printAllTheNodeInFile(output_file_path);
 		
+		tree.output.flush();
+		tree.output.close();
 		tree.printTheDatabaseNames(output_needed);
 		
 		ArrayList<Long> nums = tree.uidsNotTakenNotUsed;
