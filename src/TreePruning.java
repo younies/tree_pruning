@@ -166,7 +166,7 @@ public class TreePruning
 		  this.output.print(1);
 	  else
 		  this.output.print(0);
-	  this.output.print("\t");
+	  this.output.println("\t");
 	  
 	  //print children
 	  
