@@ -156,17 +156,17 @@ public class TreePruning
 	  
 	  //print the parent uid
 	  this.output.print(node.parentUid);
-	  this.output.println("\t");
+	  this.output.print("\t");
 	  
 	  //print new index
 	  this.output.print(node.shortName);
-	  this.output.println("\t");
+	  this.output.print("\t");
 	  
 	  if(node.tag)
 		  this.output.print(1);
 	  else
 		  this.output.print(0);
-	  this.output.println("\t");
+	  this.output.print("\t");
 	  
 	  //print children
 	  
