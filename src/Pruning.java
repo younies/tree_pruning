@@ -9,7 +9,7 @@ public class Pruning {
 	static String output_needed = "/export1/project/hondius/newKrakenResearch/synchronizedNodeUIDs.txt";
 
 	static TreePruning tree ;
-	public static void main(String[] args) throws FileNotFoundException
+	public static void main(String[] args) throws Exception
 	{
 		tree = new TreePruning(path_to_the_tree_nodes);
 		tree.tagTreeNodes(path_to_the_needed_nodes);
