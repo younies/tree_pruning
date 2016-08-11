@@ -11,6 +11,8 @@ public class TreePruning
 	private Scanner scanner;
 	boolean pruneHappened = false;
 	PrintWriter output;
+	private short indexer = 0;
+	TreeNode root;
   
   public TreePruning(String path) throws FileNotFoundException
   {
@@ -156,7 +158,17 @@ public class TreePruning
 	  this.output.print(node.parentUid);
 	  this.output.println("\t");
 	  
+	  //print new index
+	  this.output.print(node.shortName);
+	  this.output.println("\t");
 	  
+	  if(node.tag)
+		  this.output.print(1);
+	  else
+		  this.output.print(0);
+	  this.output.println("\t");
+	  
+	  //print children
 	  
 	  for(TreeNode child: node.children)
 	  {
@@ -181,6 +193,16 @@ public class TreePruning
 	  return printAllTheNodeInFile(this.getNodeUsingUid(1));
 	  
   }
+  
+  
+  public void givingShortNames(TreeNode node)
+  {
+	  node.shortName = this.indexer;
+	  ++this.indexer;
+	  for(TreeNode child : node.children)
+		  givingShortNames(child);
+  }
+  
   
   
   
