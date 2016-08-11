@@ -187,9 +187,10 @@ public class TreePruning
 	  catch(Exception e)
 	  {
 		  System.out.println(e.toString());
+		  System.out.println(e.toString());
 	  }
 	  
-	  
+	   
 	  return printAllTheNodeInFile(this.getNodeUsingUid(1));
 	  
   }
