@@ -35,5 +35,14 @@ public class Pruning {
 		}
 		
 		System.out.println(nums.size());
+		
+		TreeNode tempNode = tree.getNodeUsingUid(272844);
+		System.out.println(tempNode.tag);
+		System.out.println(tempNode.uid);
+		System.out.println(tempNode.parentUid);
+		System.out.println(tempNode.shortName);
+		
+		
+		
 	}
 }
