@@ -22,7 +22,6 @@ public class Pruning {
 		
 		tree.printAllTheNodeInFile(output_file_path);
 		
-		
 		ArrayList<Long> nums = tree.uidsNotTakenNotUsed;
 		for(long num: nums)
 		{

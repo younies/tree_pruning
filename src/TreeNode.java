@@ -1,13 +1,13 @@
 import java.util.*;
 
 class TreeNode
-  {
+{
     public long uid;
     public 	long parentUid;
     public  List<TreeNode> children;
     public  boolean tag = false;
     
-    public TreeNode(long uid , long parentUid) //any node should has its and its parent's ids
+    public TreeNode(long uid , long parentUid) //any node should has its parent's ids
     {
     		this.uid = uid;
     		this.parentUid = parentUid;
@@ -33,6 +33,4 @@ class TreeNode
   	  }
   	  return -1;
     }
-    
-    
-  }
+}
