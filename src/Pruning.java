@@ -5,7 +5,9 @@ public class Pruning {
 
 	static String path_to_the_tree_nodes = "/export1/project/hondius/newKrakenResearch/databases/nodes.txt";
 	static String path_to_the_needed_nodes  = "/export1/project/hondius/newKrakenResearch/databases/uids_new.txt"; 
-	static String output_file_path = "/export1/project/hondius/newKrakenResearch/nodes222.txt";
+	static String output_file_path = "/export1/project/hondius/newKrakenResearch/newTree.txt";
+	static String output_needed = "/export1/project/hondius/newKrakenResearch/newTree.txt";
+
 	static TreePruning tree ;
 	public static void main(String[] args) throws FileNotFoundException
 	{
@@ -24,7 +26,7 @@ public class Pruning {
 		
 		tree.printAllTheNodeInFile(output_file_path);
 		
-		
+		tree.printTheDatabaseNames(output_needed);
 		
 		ArrayList<Long> nums = tree.uidsNotTakenNotUsed;
 		for(long num: nums)

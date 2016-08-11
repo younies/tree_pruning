@@ -147,7 +147,6 @@ public class TreePruning
 	  return;
   }
   
-  
   private boolean printAllTheNodeInFile(TreeNode node)
   {
 	  //print the uid
@@ -197,22 +196,40 @@ public class TreePruning
   
   public void givingShortNames(TreeNode node)
   {
-	  node.shortName = this.indexer;
-	  ++this.indexer;
-	  for(TreeNode child : node.children)
-		  givingShortNames(child);
+	  Queue <TreeNode> breadthFirst = new LinkedList<>();
+	  breadthFirst.add(node);
+	  
+	  while(!breadthFirst.isEmpty())
+	  {
+		  TreeNode temp = breadthFirst.poll();
+		  temp.shortName = this.indexer++;
+		  for(TreeNode child: temp.children)
+			  breadthFirst.add(child);
+	  }
+	  this.indexer = 0;
   }
-  
-  
-  
   
   public ArrayList<Long> getNoNUsedUIDS()
   {
-	 
-	   return this.uidsNotTakenNotUsed;
-	   
+	   return this.uidsNotTakenNotUsed;   
   }
   
+  public void printTheDatabaseNames(String path)
+  {
+	  try
+	  {
+		  output = new PrintWriter(new FileWriter(path));
+	  }
+	  catch(Exception e)
+	  {
+		  System.out.println(e.toString());
+	  }
+	  
+	  for(  TreeNode node : treeNodes)
+	  {
+		  if(node.tag)
+			  this.output.println(node.uid);
+	  }
+	  this.output.close();
+  }
 }
-  
-
