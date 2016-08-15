@@ -13,7 +13,7 @@ public class Pruning {
 	{
 		tree = new TreePruning(path_to_the_tree_nodes);
 		tree.tagTreeNodes(path_to_the_needed_nodes);
-		tree.tree_pruning(tree.getNodeUsingUid(1));
+		tree.tree_pruning(tree.getNodeUsingUid(1) );
 		
 		while(true)
 		{
@@ -24,7 +24,7 @@ public class Pruning {
 		
 		tree.givingShortNames(tree.getNodeUsingUid(1));
 		
-		tree.printAllTheNodeInFile(output_file_path);
+		tree.printAllTheNodeInFile(output_file_path );
 		
 		tree.output.flush();
 		tree.output.close();

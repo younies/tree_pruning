@@ -147,7 +147,7 @@ public class TreePruning
 	  return;
   }
   
-  private boolean printAllTheNodeInFile(TreeNode node) throws Exception
+  private boolean printAllTheNodeInFile(TreeNode node , short parentShortName) throws Exception
   {
 	  if(node == null) throw new Exception("null node");
 	  //print the uid
@@ -162,6 +162,9 @@ public class TreePruning
 	  this.output.print(node.shortName);
 	  this.output.print("\t");
 	  
+	  this.output.print(parentShortName);
+	  this.output.print("\t");
+	  
 	  if(node.tag)
 		  this.output.print(1);
 	  else
@@ -173,11 +176,13 @@ public class TreePruning
 	  
 	  for(TreeNode child: node.children)
 	  {
-		  printAllTheNodeInFile( child);
+		  printAllTheNodeInFile( child , node.shortName);
 	  }
 	  
 	  return true;
   }
+  
+  
   
   public boolean printAllTheNodeInFile(String output_file) throws Exception
   {
@@ -191,7 +196,7 @@ public class TreePruning
 	  }
 	  
 	   
-	  return printAllTheNodeInFile(this.getNodeUsingUid(1));
+	  return printAllTheNodeInFile(this.getNodeUsingUid(1) , (short)0 );
 	  
   }
   
