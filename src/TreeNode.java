@@ -8,6 +8,7 @@ class TreeNode
     public   boolean tag = false;
     public   short shortName = -1;
     
+    
     public TreeNode(long uid , long parentUid) //any node should has its parent's ids
     {
     		this.uid = uid;

@@ -11,6 +11,7 @@ public class Pruning {
 	static TreePruning tree ;
 	public static void main(String[] args) throws Exception
 	{
+		
 		tree = new TreePruning(path_to_the_tree_nodes);
 		tree.tagTreeNodes(path_to_the_needed_nodes);
 		tree.tree_pruning(tree.getNodeUsingUid(1) );

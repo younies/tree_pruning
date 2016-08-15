@@ -14,6 +14,7 @@ public class TreePruning
 	private short indexer = 0;
 	TreeNode root;
   
+	
   public TreePruning(String path) throws FileNotFoundException
   {
 	  scanner = new Scanner( new File( path));
