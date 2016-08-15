@@ -15,6 +15,7 @@ public class Pruning {
 		tree.tagTreeNodes(path_to_the_needed_nodes);
 		tree.tree_pruning(tree.getNodeUsingUid(1) );
 		
+		
 		while(true)
 		{
 			tree.pruneAfterPruning(tree.getNodeUsingUid(1));
