@@ -5,7 +5,7 @@ public class Pruning {
 
 	static String path_to_the_tree_nodes = "/export1/project/hondius/newKrakenResearch/databases/nodes.txt";
 	static String path_to_the_needed_nodes  = "/export1/project/hondius/newKrakenResearch/databases/uids_new.txt"; 
-	static String output_file_path = "/export1/project/hondius/newKrakenResearch/finalNewTree222.txt";
+	static String output_file_path = "/export1/project/hondius/newKrakenResearch/finalNewTree22.txt";
 	static String output_needed = "/export1/project/hondius/newKrakenResearch/finalSynchronizedNodeUIDs.txt";
 
 	static TreePruning tree ;
