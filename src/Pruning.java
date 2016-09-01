@@ -8,6 +8,8 @@ public class Pruning {
 	static String output_file_path = "/export1/project/hondius/newKrakenResearch/finalNewTree.txt";
 	static String output_needed = "/export1/project/hondius/newKrakenResearch/finalSynchronizedNodeUIDs.txt";
 
+	
+	
 	static TreePruning tree ;
 	public static void main(String[] args) throws Exception
 	{
